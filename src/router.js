@@ -2,9 +2,11 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 
+const vm = new Vue();
+
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   routes: [
     {
       path: '/',
@@ -21,3 +23,12 @@ export default new Router({
     }
   ]
 })
+
+router.afterEach(() => {
+	//路由切换回到顶部 （根据实际情况决定是否需要）
+	if (!window.dom_body) {
+		window.dom_body = document.documentElement || document.body;
+	}
+	vm.$util.easeout(window.dom_body, 0, 5);
+})
+export default router
