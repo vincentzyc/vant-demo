@@ -5,10 +5,11 @@ import router from './router'
 import './assets/js'
 import './assets/css/base.css'
 import './assets/css/main.styl'
-import { Dialog,Toast } from 'vant';
+import { Dialog, Toast, Lazyload } from 'vant';
 
 Vue.use(Dialog);
 Vue.use(Toast);
+Vue.use(Lazyload);
 
 Vue.config.productionTip = false
 

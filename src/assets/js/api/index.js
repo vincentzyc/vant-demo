@@ -1,6 +1,7 @@
 import Vue from "vue";
 import apiModule1 from './apiModule1.js';
 import apiModule2 from './apiModule2.js';
+import common from './common.js';
 
 const vm = new Vue()
 
@@ -19,6 +20,7 @@ const createInterface = arr => {
 const Api = {
   ApiModule1: createInterface(apiModule1),
   ApiModule2: createInterface(apiModule2),
+  Common: createInterface(common),
   env() {
     if (process.env.NODE_ENV === "development" || window.location.href.includes('192.168')) return "development";
     if (window.location.href.includes('test-mgr')) return 'test';
