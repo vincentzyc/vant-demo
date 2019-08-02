@@ -77,14 +77,6 @@ export default {
     return null;
   },
 	/**
-	 * 检查手机号是否合法
-	 * @param {String} phone 手机号
-	 */
-  checkMobile(phone) {
-    if ((/^1[0-9]{10}$/.test(phone))) return true;
-    return false;
-  },
-	/**
 	 * 倒计时
 	 * @param  time  倒计时秒数
 	 * @param  tickFunc  每秒执行

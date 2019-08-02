@@ -6,7 +6,7 @@
       <div class="form-wrapper">
         <img v-lazy="require('./img/3.png')" alt class="fullimg" />
         <p class="tiptext">请认真填写信息以确保卡能寄送到</p>
-        <jb-form class="form-content" ref="form" :salesProdName="salesProdName" :prodId="prodId" :productId="productId"></jb-form>
+        <BaseForm class="form-content" ref="form" :productId="productId"/>
         <div class="submit-btn" @click="submitOrder">0元免费体验</div>
       </div>
     </div>
@@ -40,12 +40,12 @@
 </template>
 
 <script>
-import jbForm from './form'
+import BaseForm from '@/components/form/form1'
 
 export default {
   name: "index",
   components: {
-    jbForm
+    BaseForm
   },
   data() {
     return {
@@ -60,8 +60,8 @@ export default {
       this.showInfo = !this.showInfo;
     },
     async submitOrder() {
-      console.log('提交');
-      // this.$refs.form.submitOrder();
+      // console.log('提交');
+      this.$refs.form.submitOrder();
     }
   },
   mounted() {

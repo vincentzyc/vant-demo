@@ -46,7 +46,7 @@ export default {
     },
     close() {
       this.showPicker = false;
-      this.$emit('input', this.valuesArr)
+      this.$emit('close', this.valuesArr)
     },
     removeArrayEl(arr, val) {
       let index = arr.indexOf(val);
