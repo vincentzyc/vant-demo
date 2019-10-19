@@ -107,8 +107,8 @@ export default {
       this.columns[2].values = area;
       this.valuesArr = [province[0], city[0], area[0]];
     },
-    async initDistrict() {
-      let res = await this.$api.Common.getCityInfo({ productCode: this.productId });
+    async initDistrict(productId) {
+      let res = await this.$api.Common.getCityInfo({ productCode: productId });
       if (!Array.isArray(res) || res.length === 0) return;
       this.allCitys = res;
       let province = res.map(v => v.cityName);
@@ -127,7 +127,7 @@ export default {
   },
   created() {
     this.initLocalCitys();
-    this.initDistrict()
+    // this.initDistrict()
   }
 }
 </script>
