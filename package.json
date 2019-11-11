@@ -1,5 +1,5 @@
 {
-  "name": "h5-demo",
+  "name": "vant-demo",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,24 +8,24 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "core-js": "^2.6.5",
-    "vant": "^2.0.9",
+    "core-js": "^3.3.2",
+    "vant": "^2.0.5",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.9.0",
-    "@vue/cli-plugin-eslint": "^3.9.0",
-    "@vue/cli-service": "^3.9.0",
-    "axios": "^0.18.0",
-    "babel-eslint": "^10.0.1",
-    "babel-plugin-import": "^1.12.0",
+    "@vue/cli-plugin-babel": "^4.0.0",
+    "@vue/cli-plugin-eslint": "^4.0.0",
+    "@vue/cli-service": "^4.0.0",
+    "babel-eslint": "^10.0.3",
+    "babel-plugin-import": "^1.12.2",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "vue-cli-plugin-vant": "^1.0.1",
+    "vue-template-compiler": "^2.6.10",
+    "axios": "^0.18.0",
     "postcss-px2rem": "^0.3.0",
     "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.2",
-    "vue-cli-plugin-axios": "0.0.4",
-    "vue-template-compiler": "^2.6.10"
+    "stylus-loader": "^3.0.2"
   }
 }
