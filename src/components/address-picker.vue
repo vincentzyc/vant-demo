@@ -16,7 +16,9 @@ export default {
   props: {
     value: {
       type: Array,
-      default: [],
+      default: ()=>{
+        return []
+      },
     },
     productId: {
       type: [Number, String]
@@ -93,7 +95,7 @@ export default {
         let areaList = this.getChildAddress(values[0], values[1]);
         picker.setColumnValues(2, areaList);
         picker.setColumnValue(2, areaList[0]);
-      } else { }
+      }
       this.valuesArr = picker.getValues();
       this.$emit('input', this.valuesArr);
     },
