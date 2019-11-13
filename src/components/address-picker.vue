@@ -1,5 +1,5 @@
 <template>
-  <van-popup v-model="showPicker" position="bottom">
+  <van-popup v-model="showPicker" position="bottom" @close="close()">
     <van-picker show-toolbar title="请选择省市区" ref="adsPicker" :columns="columns" @change="onChange" @cancel="close()" @confirm="close()" />
   </van-popup>
 </template>
@@ -44,6 +44,7 @@ export default {
   },
   methods: {
     open() {
+      if(this.value.length===0) this.$emit('input', this.valuesArr)
       this.showPicker = true
     },
     close() {
