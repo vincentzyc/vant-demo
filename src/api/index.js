@@ -30,7 +30,7 @@ const Api = {
     return new Promise(resolve => {
       vm.$axios.post(url, data).then(res => {
         if (res.status !== 200) {
-          console.log('请求失败', res);
+          // console.log('请求失败', res);
           if (backType === 'getError') resolve({ error: true });
           vm.$toast.loading({ mask: true });
           return vm.$dialog.alert({ message: res.message || '网络繁忙' });
